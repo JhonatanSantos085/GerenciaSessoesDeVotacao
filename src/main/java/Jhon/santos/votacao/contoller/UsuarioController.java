@@ -2,7 +2,7 @@ package Jhon.santos.votacao.contoller;
 
 
 import Jhon.santos.votacao.domain.services.UsuarioService;
-import Jhon.santos.votacao.domain.user.Usuario;
+import Jhon.santos.votacao.domain.model.Usuario;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

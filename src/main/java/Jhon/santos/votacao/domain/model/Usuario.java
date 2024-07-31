@@ -1,4 +1,4 @@
-package Jhon.santos.votacao.domain.user;
+package Jhon.santos.votacao.domain.model;
 
 
 import jakarta.persistence.Entity;

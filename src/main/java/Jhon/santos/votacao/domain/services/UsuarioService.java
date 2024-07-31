@@ -2,7 +2,7 @@ package Jhon.santos.votacao.domain.services;
 
 
 import Jhon.santos.votacao.domain.repositories.UsuarioRepository;
-import Jhon.santos.votacao.domain.user.Usuario;
+import Jhon.santos.votacao.domain.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
