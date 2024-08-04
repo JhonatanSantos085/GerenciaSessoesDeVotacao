@@ -1,10 +1,8 @@
 package Jhon.santos.votacao.domain.model;
 
 import java.time.LocalDateTime;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
+import jakarta.persistence.*;
 import lombok.*;
 
 @Data
@@ -22,9 +20,22 @@ public class Pauta {
     private LocalDateTime dataDeCriacao;
     private String status; //aberta, fechada, em votacao
 
+    @ManyToOne
+    @JoinColumn(name = "Usuario_Criador_id")
+    private Usuario usuarioCriador;
+
+    @OneToOne(mappedBy = "pauta", cascade = CascadeType.ALL)
+    private SessaoVotacao sessaoVotacao;
 
     public void setDataDeCriacao(){
         this.dataDeCriacao = LocalDateTime.now();
     }
 
+    public SessaoVotacao getSessaoVotacao() {
+        return sessaoVotacao;
+    }
+
+    public void setSessaoVotacao(SessaoVotacao sessaoVotacao) {
+        this.sessaoVotacao = sessaoVotacao;
+    }
 }

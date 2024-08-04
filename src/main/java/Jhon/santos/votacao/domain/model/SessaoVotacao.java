@@ -1,9 +1,7 @@
 package Jhon.santos.votacao.domain.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -19,7 +17,7 @@ public class SessaoVotacao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "pauta_id")
     private Pauta pauta;
 
@@ -39,5 +37,13 @@ public class SessaoVotacao {
 
     public void setStatus(String aberta) {
         this.status =status;
+    }
+
+    public Pauta getPauta() {
+        return pauta;
+    }
+
+    public void setPauta(Pauta pauta) {
+        this.pauta = pauta;
     }
 }
