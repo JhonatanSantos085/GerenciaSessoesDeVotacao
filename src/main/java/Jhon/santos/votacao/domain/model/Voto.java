@@ -32,4 +32,20 @@ public class Voto {
     public void setDataHoraDoVoto(){
         this.dataHoraDoVoto = LocalDateTime.now();
     }
+
+    public SessaoVotacao getSessaoVotacao() {
+        return sessaoVotacao;
+    }
+
+    public void setSessaoVotacao(SessaoVotacao sessaoVotacao) {
+        this.sessaoVotacao = sessaoVotacao;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }

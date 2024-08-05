@@ -35,7 +35,7 @@ public class SessaoVotacao {
     }
 
 
-    public void setStatus(String aberta) {
+    public void setStatus(String status) {
         this.status =status;
     }
 
