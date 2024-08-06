@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 public interface VotoRepository extends JpaRepository<Voto, Long> {
     boolean existsBySessaoVotacaoAndUsuario(SessaoVotacao sessaoVotacao, Usuario usuario);
 
+    long countBySessaoVotacaoAndVoto(SessaoVotacao sessaoVotacao, String voto);
 }

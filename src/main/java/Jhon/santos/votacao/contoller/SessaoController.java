@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/sessoesVotacao")
@@ -23,6 +24,11 @@ public class SessaoController {
     @GetMapping
     public List<SessaoVotacao>listSessoes(){
         return sessaoService.listSessoes();
+    }
+
+    @GetMapping("/{id}/calcular-votos")
+    public Map<String, Long> calcularVotos(@PathVariable Long id){
+        return sessaoService.calcularVotos(id);
     }
 
 }
